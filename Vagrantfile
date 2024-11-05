@@ -8,7 +8,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # Web Server
     config.vm.define "website-server" do |web|
         web.vm.hostname = "website-server"
-        web.vm.box = "bento/ubuntu-18.04"
+        web.vm.box = "bento/ubuntu-20.04"
         web.vm.network "private_network", ip: "192.168.56.154"
 
         # Increase memory and CPU for the web server
@@ -22,7 +22,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # Database Server
     config.vm.define "database-server" do |db|
         db.vm.hostname = "database-server"
-        db.vm.box = "bento/ubuntu-18.04"
+        db.vm.box = "bento/ubuntu-20.04"
         db.vm.network "private_network", ip: "192.168.56.155"
 
         # Optionally, you can also increase the resources for the database server
